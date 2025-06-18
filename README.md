@@ -146,20 +146,6 @@ face-recognition-attendance/
 │   └── ProfessorWilliams.jpg   # For staff without roll numbers
 ├── snapshots/                  # Auto-created folder for attendance snapshots
 ├── README.md                   # This documentation file
-└── requirements.txt            # Python dependencies (optional)
-
-## Database Structure
-Table: attendance
-+---------------+--------------+------+-----+-------------------+-------------------+
-| Field         | Type         | Null | Key | Default           | Extra             |
-+---------------+--------------+------+-----+-------------------+-------------------+
-| id            | int          | NO   | PRI | NULL              | auto_increment    |
-| name          | varchar(100) | NO   |     | NULL              |                   |
-| roll_no       | varchar(50)  | YES  |     | NULL              |                   |
-| date          | date         | NO   |     | NULL              |                   |
-| time          | time         | NO   |     | NULL              |                   |
-| snapshot_path | varchar(255) | NO   |     | NULL              |                   |
-| timestamp     | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
-+---------------+--------------+------+-----+-------------------+-------------------+
+└── requirements.txt            # Python dependencies 
 
 For any issues or questions, please open an issue in the GitHub repository.
