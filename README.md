@@ -5,7 +5,7 @@ This project implements a face recognition-based attendance system using Python,
 # Face Recognition Attendance System
 
 ## Copyright Notice
-© 2024 Siddham Shah. All Rights Reserved.
+© 2025 Siddham Shah. All Rights Reserved.
 
 This software and documentation contain proprietary information and are protected by copyright law. Unauthorized reproduction, distribution, or modification is strictly prohibited.
 
