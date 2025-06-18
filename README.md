@@ -139,7 +139,7 @@ face-recognition-attendance/
 │   └── ProfessorWilliams.jpg   # For staff without roll numbers
 ├── snapshots/                  # Auto-created folder for attendance snapshots
 ├── README.md                   # This documentation file
-└── requirements.txt            # Python dependencies (optional)
+└── requirements.txt            # Python dependencies 
 ```
 
 
