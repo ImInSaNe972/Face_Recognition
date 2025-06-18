@@ -127,17 +127,10 @@ SELECT * FROM attendance ORDER BY date DESC, time DESC;
    - Ensure the face is clearly visible in the dataset images
    - Try different angles if recognition fails
 
-## Customization Options
-
-1. Change the recognition model by modifying the `model_name` parameter in `DeepFace.find()`
-   - Options: "VGG-Face", "Facenet", "OpenFace", "DeepFace", "DeepID", "Dlib", "ArcFace"
-   
-2. Adjust the detection sensitivity by modifying:
-   - `scaleFactor` and `minNeighbors` in `detectMultiScale()`
-
-3. Change the analysis time by modifying the `time.time() - start_time >= 5` condition
 
 ## Directory Structure
+
+```
 face-recognition-attendance/
 ├── attendance_system.py        # Main Python script
 ├── dataset/                    # Folder containing known faces
@@ -146,6 +139,24 @@ face-recognition-attendance/
 │   └── ProfessorWilliams.jpg   # For staff without roll numbers
 ├── snapshots/                  # Auto-created folder for attendance snapshots
 ├── README.md                   # This documentation file
-└── requirements.txt            # Python dependencies 
+└── requirements.txt            # Python dependencies (optional)
+```
+
+
+## Important Notes About Directory Structure
+
+1. **dataset/** - This folder must contain:
+   - Images of faces to recognize
+   - Recommended naming convention:
+     - For students: `ROLLNO_NAME.jpg` (e.g., `101_JohnDoe.jpg`)
+     - For staff: `NAME.jpg` (e.g., `ProfessorSmith.jpg`)
+   - Images should be clear frontal face photos (200x200 pixels minimum recommended)
+
+2. **snapshots/** - This folder will be:
+   - Automatically created when you first run the program
+   - Contains timestamped images of each attendance recording
+   - Files are named in the format: `NAME_YYYYMMDD_HHMMSS.jpg`
+
+3. You can add subfolders within the `dataset/` directory if needed (DeepFace will search recursively)
 
 For any issues or questions, please open an issue in the GitHub repository.
